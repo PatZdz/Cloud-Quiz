@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '../widgets/app_button.dart';
+import '../constants/app_constants.dart';
 import 'quiz_screen.dart';
 
 class QuestionNumberSelectionScreen extends StatelessWidget {
@@ -9,63 +11,42 @@ class QuestionNumberSelectionScreen extends StatelessWidget {
         title: Text('Select Number of Questions'),
       ),
       body: Padding(
-        padding: EdgeInsets.all(24.0),
+        padding: EdgeInsets.all(AppConstants.defaultPadding),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            SizedBox(
-              height: 56,
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                ),
-                child: Text('5 Random Questions', style: TextStyle(fontSize: 18)),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => QuizScreen(questionCount: 5)),
-                  );
-                },
-              ),
+            AppButton(
+              text: '5 Random Questions',
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => QuizScreen(questionCount: 5)),
+                );
+              },
             ),
-            SizedBox(height: 16),
-            SizedBox(
-              height: 56,
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                ),
-                child: Text('10 Random Questions', style: TextStyle(fontSize: 18)),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => QuizScreen(questionCount: 10)),
-                  );
-                },
-              ),
+            SizedBox(height: AppConstants.defaultSpacing),
+            AppButton(
+              text: '10 Random Questions',
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => QuizScreen(questionCount: 10)),
+                );
+              },
             ),
-            SizedBox(height: 16),
-            SizedBox(
-              height: 56,
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                ),
-                child: Text('15 Random Questions', style: TextStyle(fontSize: 18)),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => QuizScreen(questionCount: 15)),
-                  );
-                },
-              ),
+            SizedBox(height: AppConstants.defaultSpacing),
+            AppButton(
+              text: '15 Random Questions',
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => QuizScreen(questionCount: 15)),
+                );
+              },
             ),
           ],
         ),
