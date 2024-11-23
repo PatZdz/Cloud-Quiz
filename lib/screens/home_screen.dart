@@ -4,32 +4,58 @@ import 'provider_selection_screen.dart';
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // Ekran główny z wyborem dostawcy chmury
     return Scaffold(
       appBar: AppBar(
         title: Text('Cloud Exam Quiz'),
       ),
-      body: Center(
+      body: Padding(
+        padding: EdgeInsets.all(24.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            ElevatedButton(
-              child: Text('GCP'),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => ProviderSelectionScreen()),
-                );
-              },
+            SizedBox(
+              height: 56,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                ),
+                child: Text('GCP', style: TextStyle(fontSize: 18)),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ProviderSelectionScreen()),
+                  );
+                },
+              ),
             ),
-            ElevatedButton(
-              child: Text('AWS'),
-              onPressed: null, // Na razie nieklikalne
+            SizedBox(height: 16),
+            SizedBox(
+              height: 56,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                ),
+                child: Text('AWS', style: TextStyle(fontSize: 18)),
+                onPressed: null,
+              ),
             ),
-            ElevatedButton(
-              child: Text('Azure'),
-              onPressed: null, // Na razie nieklikalne
+            SizedBox(height: 16),
+            SizedBox(
+              height: 56,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                ),
+                child: Text('Azure', style: TextStyle(fontSize: 18)),
+                onPressed: null,
+              ),
             ),
           ],
         ),

@@ -93,12 +93,13 @@ List<Question> allQuestions = [
         'An organization is migrating its on-premises environment to the cloud and needs to determine which resource components the public cloud provider owns. Which two functions does a public cloud provider own? (Choose two.)',
     options: [
       'Hardware maintenance',
-      'Infrastructure architecture',
+      'Infrastructure architecture', 
       'Infrastructure deployment automation',
       'Hardware capacity management',
       'Fixing application security issues',
     ],
-    correctAnswerIndex: -1, // Since there are two correct answers, we need to handle this differently
+    correctAnswerIndex: 0,
+    secondCorrectAnswerIndex: 3, // Dodajemy drugą poprawną odpowiedź
   ),
   // Question 8
   Question(
