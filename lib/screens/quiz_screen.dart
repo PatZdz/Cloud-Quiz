@@ -24,7 +24,6 @@ class _QuizScreenState extends State<QuizScreen> {
   List<Question> questions = [];
   int currentQuestionIndex = 0;
   List<List<int>> selectedAnswers = [];
-
   List<int> temporaryAnswers = [];
 
   @override
@@ -35,7 +34,7 @@ class _QuizScreenState extends State<QuizScreen> {
     } else {
       questions = List<Question>.from(allQuestions);
       questions.shuffle();
-      questions = questions.take(widget.questionCount!).toList();
+      questions = questions.take(widget.questionCount ?? allQuestions.length).toList();
     }
   }
 
@@ -49,7 +48,6 @@ class _QuizScreenState extends State<QuizScreen> {
           temporaryAnswers.add(index);
         }
 
-        // Gdy użytkownik wybrał dwie odpowiedzi, przechodzimy do następnego pytania
         if (temporaryAnswers.length == 2) {
           selectedAnswers.add(List<int>.from(temporaryAnswers));
           temporaryAnswers.clear();
@@ -72,7 +70,6 @@ class _QuizScreenState extends State<QuizScreen> {
   }
 
   void _showResults() {
-    // Jeśli zostały jakieś tymczasowe odpowiedzi, dodajemy je do selectedAnswers
     if (temporaryAnswers.isNotEmpty) {
       selectedAnswers.add(List<int>.from(temporaryAnswers));
       temporaryAnswers.clear();
@@ -98,8 +95,7 @@ class _QuizScreenState extends State<QuizScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title:
-            Text('Question ${currentQuestionIndex + 1}/${questions.length}'),
+        title: Text('Question ${currentQuestionIndex + 1}/${questions.length}'),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -111,8 +107,7 @@ class _QuizScreenState extends State<QuizScreen> {
                 padding: EdgeInsets.all(AppConstants.defaultPadding),
                 decoration: BoxDecoration(
                   color: Colors.blue.withOpacity(0.1),
-                  borderRadius:
-                      BorderRadius.circular(AppConstants.defaultBorderRadius),
+                  borderRadius: BorderRadius.circular(AppConstants.defaultBorderRadius),
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -142,8 +137,7 @@ class _QuizScreenState extends State<QuizScreen> {
                 bool isSelected = temporaryAnswers.contains(index);
 
                 return Padding(
-                  padding:
-                      EdgeInsets.only(bottom: AppConstants.defaultSpacing),
+                  padding: EdgeInsets.only(bottom: AppConstants.defaultSpacing),
                   child: AppButton(
                     text: text,
                     isSelected: isSelected,
