@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import '../widgets/app_button.dart';
 import '../constants/app_constants.dart';
-import 'exam_selection_screen.dart';
+import 'question_range_selection_screen.dart';
 
-class ProviderSelectionScreen extends StatelessWidget {
+class QuestionPackScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Select GCP Exam'),
+        title: Text('Wybierz pakiet pytań'),
       ),
       body: Padding(
         padding: EdgeInsets.all(AppConstants.defaultPadding),
@@ -17,12 +17,13 @@ class ProviderSelectionScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             AppButton(
-              text: 'CDL',
+              text: 'Pytania 1-50',
               onPressed: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => ExamSelectionScreen()),
+                    builder: (context) => QuestionRangeSelectionScreen(),
+                  ),
                 );
               },
             ),

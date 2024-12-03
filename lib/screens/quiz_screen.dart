@@ -9,12 +9,17 @@ import 'result_screen.dart';
 class QuizScreen extends StatefulWidget {
   final int? questionCount;
   final List<Question>? predefinedQuestions;
+  final List<int>? selectedQuestionIds;
 
-  QuizScreen({this.questionCount}) : predefinedQuestions = null;
+  QuizScreen({
+    this.questionCount,
+    this.selectedQuestionIds,
+  }) : predefinedQuestions = null;
 
   QuizScreen.withQuestions({required List<Question> questions})
       : predefinedQuestions = questions,
-        questionCount = questions.length;
+        questionCount = questions.length,
+        selectedQuestionIds = null;
 
   @override
   _QuizScreenState createState() => _QuizScreenState();
@@ -32,9 +37,15 @@ class _QuizScreenState extends State<QuizScreen> {
     if (widget.predefinedQuestions != null) {
       questions = widget.predefinedQuestions!;
     } else {
-      questions = List<Question>.from(allQuestions);
+      if (widget.selectedQuestionIds != null) {
+        questions = allQuestions
+            .where((q) => widget.selectedQuestionIds!.contains(q.id))
+            .toList();
+      } else {
+        questions = List<Question>.from(allQuestions);
+      }
       questions.shuffle();
-      questions = questions.take(widget.questionCount ?? allQuestions.length).toList();
+      questions = questions.take(widget.questionCount ?? questions.length).toList();
     }
   }
 
@@ -75,7 +86,7 @@ class _QuizScreenState extends State<QuizScreen> {
       temporaryAnswers.clear();
     }
 
-    Navigator.push(
+    Navigator.pushReplacement(
       context,
       MaterialPageRoute(
         builder: (context) => ResultScreen(
@@ -95,7 +106,7 @@ class _QuizScreenState extends State<QuizScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Question ${currentQuestionIndex + 1}/${questions.length}'),
+        title: Text('Pytanie ${currentQuestionIndex + 1}/${questions.length}'),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -120,7 +131,7 @@ class _QuizScreenState extends State<QuizScreen> {
                       Padding(
                         padding: EdgeInsets.only(top: 8.0),
                         child: Text(
-                          'Select two correct answers',
+                          'Wybierz dwie poprawne odpowiedzi',
                           style: TextStyle(
                             color: Colors.blue,
                             fontWeight: FontWeight.bold,
