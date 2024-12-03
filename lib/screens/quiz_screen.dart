@@ -106,7 +106,7 @@ class _QuizScreenState extends State<QuizScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Pytanie ${currentQuestionIndex + 1}/${questions.length}'),
+        title: Text('Question ${currentQuestionIndex + 1}/${questions.length}'),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -131,7 +131,7 @@ class _QuizScreenState extends State<QuizScreen> {
                       Padding(
                         padding: EdgeInsets.only(top: 8.0),
                         child: Text(
-                          'Wybierz dwie poprawne odpowiedzi',
+                          'Choose two correct answers',
                           style: TextStyle(
                             color: Colors.blue,
                             fontWeight: FontWeight.bold,

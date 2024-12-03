@@ -7,7 +7,7 @@ class AppButton extends StatelessWidget {
   final bool isEnabled;
   final bool isSelected;
 
-  const AppButton({
+  const AppButton({super.key, 
     required this.text,
     required this.onPressed,
     this.isEnabled = true,

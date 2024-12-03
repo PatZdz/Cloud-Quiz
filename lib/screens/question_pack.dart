@@ -8,7 +8,7 @@ class QuestionPackScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Wybierz pakiet pytań'),
+        title: Text('Select a question package'),
       ),
       body: Padding(
         padding: EdgeInsets.all(AppConstants.defaultPadding),
@@ -17,7 +17,7 @@ class QuestionPackScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             AppButton(
-              text: 'Pytania 1-50',
+              text: 'Questions 1-50',
               onPressed: () {
                 Navigator.push(
                   context,

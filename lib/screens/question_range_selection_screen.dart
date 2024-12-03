@@ -34,7 +34,7 @@ class _QuestionRangeSelectionScreenState extends State<QuestionRangeSelectionScr
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Wybierz zakres pytań'),
+        title: Text('Select a range of questions'),
       ),
       body: Padding(
         padding: EdgeInsets.all(AppConstants.defaultPadding),
@@ -45,7 +45,7 @@ class _QuestionRangeSelectionScreenState extends State<QuestionRangeSelectionScr
                 itemCount: ranges.length,
                 itemBuilder: (context, index) {
                   return CheckboxListTile(
-                    title: Text('Pytania ${ranges[index]['start']} - ${ranges[index]['end']}'),
+                    title: Text('Questions ${ranges[index]['start']} - ${ranges[index]['end']}'),
                     value: selectedRanges[index],
                     onChanged: (bool? value) {
                       setState(() {
@@ -62,7 +62,7 @@ class _QuestionRangeSelectionScreenState extends State<QuestionRangeSelectionScr
                 if (selectedIds.isEmpty) {
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(
-                      content: Text('Wybierz przynajmniej jeden zakres pytań'),
+                      content: Text('Select at least one range of questions'),
                     ),
                   );
                   return;
@@ -76,7 +76,7 @@ class _QuestionRangeSelectionScreenState extends State<QuestionRangeSelectionScr
                   ),
                 );
               },
-              child: Text('Dalej'),
+              child: Text('Next'),
             ),
             SizedBox(height: AppConstants.defaultPadding),
           ],

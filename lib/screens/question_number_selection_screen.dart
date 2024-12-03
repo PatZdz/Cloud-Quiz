@@ -27,17 +27,17 @@ class _QuestionNumberSelectionScreenState extends State<QuestionNumberSelectionS
     if (maxQuestions == 0) {
       return Scaffold(
         appBar: AppBar(
-          title: Text('Wybierz liczbę pytań'),
+          title: Text('Select the number of questions'),
         ),
         body: Center(
-          child: Text('Brak wybranych pytań'),
+          child: Text('No selected questions'),
         ),
       );
     }
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Wybierz liczbę pytań'),
+        title: Text('Select the number of questions'),
       ),
       body: Padding(
         padding: EdgeInsets.all(AppConstants.defaultPadding),
@@ -46,7 +46,7 @@ class _QuestionNumberSelectionScreenState extends State<QuestionNumberSelectionS
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Text(
-              'Wybrana liczba pytań: $questionCount',
+              'Selected number of questions: $questionCount',
               style: TextStyle(fontSize: 18),
               textAlign: TextAlign.center,
             ),
