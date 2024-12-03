@@ -15,7 +15,7 @@ class _QuestionNumberSelectionScreenState extends State<QuestionNumberSelectionS
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Wybierz liczbę pytań'),
+        title: Text('Select the number of questions'),
       ),
       body: Padding(
         padding: EdgeInsets.all(AppConstants.defaultPadding),
@@ -23,7 +23,7 @@ class _QuestionNumberSelectionScreenState extends State<QuestionNumberSelectionS
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'Liczba pytań: ${_questionCount.toInt()}',
+              'Number of questions: ${_questionCount.toInt()}',
               style: TextStyle(fontSize: 20),
             ),
             Slider(
