@@ -1,3 +1,4 @@
+import 'package:cloud_quiz/widgets/app_button.dart';
 import 'package:flutter/material.dart';
 import '../constants/app_constants.dart';
 import 'quiz_screen.dart';
@@ -64,7 +65,8 @@ class _QuestionSliderState extends State<QuestionSlider> {
               },
             ),
             const SizedBox(height: AppConstants.defaultSpacing * 2),
-            ElevatedButton(
+            AppButton(
+              text: 'Start Quiz',
               onPressed: maxQuestions > 0 ? () {
                 Navigator.push(
                   context,
@@ -76,7 +78,7 @@ class _QuestionSliderState extends State<QuestionSlider> {
                   ),
                 );
               } : null,
-              child: const Text('Start Quiz'),
+              isEnabled: maxQuestions > 0,
             ),
           ],
         ),

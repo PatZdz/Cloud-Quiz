@@ -1,3 +1,4 @@
+import 'package:cloud_quiz/widgets/app_button.dart';
 import 'package:flutter/material.dart';
 import '../constants/app_constants.dart';
 import 'question_slider.dart';
@@ -88,7 +89,8 @@ class _QuestionCheckboxState extends State<QuestionCheckbox> {
                 },
               ),
             ),
-            ElevatedButton(
+            AppButton(
+              text: 'Next',
               onPressed: () {
                 List<int> selectedIds = getSelectedQuestionIds();
                 if (selectedIds.isEmpty) {
@@ -108,7 +110,6 @@ class _QuestionCheckboxState extends State<QuestionCheckbox> {
                   ),
                 );
               },
-              child: const Text('Next'),
             ),
             const SizedBox(height: AppConstants.defaultPadding),
           ],
