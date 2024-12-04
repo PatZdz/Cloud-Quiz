@@ -3,22 +3,52 @@ import '../constants/app_constants.dart';
 import 'question_slider.dart';
 
 class QuestionCheckbox extends StatefulWidget {
-  const QuestionCheckbox({super.key});
+  final int startId;
+  final int endId;
+
+  const QuestionCheckbox({
+    super.key, 
+    required this.startId, 
+    required this.endId,
+  });
 
   @override
   _QuestionCheckboxState createState() => _QuestionCheckboxState();
 }
 
 class _QuestionCheckboxState extends State<QuestionCheckbox> {
-  List<bool> selectedRanges = [false, false, false, false, false];
-  
-  List<Map<String, int>> ranges = [
-    {'start': 1, 'end': 10},
-    {'start': 11, 'end': 20},
-    {'start': 21, 'end': 30},
-    {'start': 31, 'end': 40},
-    {'start': 41, 'end': 50},
-  ];
+  late List<bool> selectedRanges;
+  late List<Map<String, int>> ranges;
+
+  @override
+  void initState() {
+    super.initState();
+    _initializeRanges();
+  }
+
+  void _initializeRanges() {
+    int totalQuestions = widget.endId - widget.startId + 1;
+    int numberOfRanges = (totalQuestions <= 36) ? 3 : 5; // Special case for 251-286
+    int questionsPerRange = (totalQuestions / numberOfRanges).ceil();
+
+    ranges = [];
+    selectedRanges = List.generate(numberOfRanges, (_) => false);
+
+    for (int i = 0; i < numberOfRanges; i++) {
+      int rangeStart = widget.startId + (i * questionsPerRange);
+      int rangeEnd = rangeStart + questionsPerRange - 1;
+      
+      // Ensure the last range doesn't exceed the endId
+      if (rangeEnd > widget.endId) {
+        rangeEnd = widget.endId;
+      }
+
+      ranges.add({
+        'start': rangeStart,
+        'end': rangeEnd,
+      });
+    }
+  }
 
   List<int> getSelectedQuestionIds() {
     List<int> ids = [];
