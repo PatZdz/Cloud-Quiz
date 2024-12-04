@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import '../widgets/app_button.dart';
 import '../constants/app_constants.dart';
 import 'question_checkbox.dart';
+import 'question_slider.dart';
+import 'quiz_screen.dart';
+import 'dart:math';
 
 class QuestionPackScreen extends StatelessWidget {
   const QuestionPackScreen({super.key});
@@ -47,6 +50,40 @@ class QuestionPackScreen extends StatelessWidget {
               AppButton(
                 text: 'Questions 251-286',
                 onPressed: () => _navigateToCheckbox(context, 251, 286),
+              ),
+              const SizedBox(height: AppConstants.defaultSpacing),
+              AppButton(
+                text: 'All questions',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => QuestionSlider(
+                        selectedQuestionIds: List.generate(286, (i) => i + 1),
+                      ),
+                    ),
+                  );
+                },
+              ),
+              const SizedBox(height: AppConstants.defaultSpacing),
+              AppButton(
+                text: 'Sample Exam',
+                onPressed: () {
+                  final random = Random();
+                  final allQuestions = List.generate(286, (i) => i + 1);
+                  allQuestions.shuffle(random);
+                  final selectedQuestions = allQuestions.take(60).toList();
+                  
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => QuizScreen(
+                        questionCount: 60,
+                        selectedQuestionIds: selectedQuestions,
+                      ),
+                    ),
+                  );
+                },
               ),
             ],
           ),
