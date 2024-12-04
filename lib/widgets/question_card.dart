@@ -7,7 +7,7 @@ class QuestionCard extends StatelessWidget {
   final String userAnswer;
   final bool isCorrect;
 
-  const QuestionCard({
+  const QuestionCard({super.key, 
     required this.question,
     required this.userAnswer,
     required this.isCorrect,
@@ -26,7 +26,7 @@ if (question.secondCorrectAnswerIndex != null) {
 // ...
 
     return Container(
-      padding: EdgeInsets.all(AppConstants.defaultPadding),
+      padding: const EdgeInsets.all(AppConstants.defaultPadding),
       decoration: BoxDecoration(
         border: Border.all(color: Colors.grey.withOpacity(0.2)),
         borderRadius:
@@ -41,13 +41,13 @@ if (question.secondCorrectAnswerIndex != null) {
               Expanded(
                 child: Text(
                   question.question,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 16.0,
                     fontWeight: FontWeight.w500,
                   ),
                 ),
               ),
-              SizedBox(width: 8),
+              const SizedBox(width: 8),
               Icon(
                 isCorrect ? Icons.check_circle : Icons.cancel,
                 color: isCorrect ? Colors.green : Colors.red,
@@ -55,7 +55,7 @@ if (question.secondCorrectAnswerIndex != null) {
               ),
             ],
           ),
-          SizedBox(height: 12),
+          const SizedBox(height: 12),
           Text(
             'Your answer: $userAnswer',
             style: TextStyle(
@@ -63,7 +63,7 @@ if (question.secondCorrectAnswerIndex != null) {
               height: 1.5,
             ),
           ),
-          SizedBox(height: 4),
+          const SizedBox(height: 4),
           Text(
             'Correct answer: $correctAnswer',
             style: TextStyle(

@@ -5,14 +5,16 @@ import '../constants/app_constants.dart';
 
 
 class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Cloud Exam Quiz'),
+        title: const Text('Cloud Exam Quiz'),
       ),
       body: Padding(
-        padding: EdgeInsets.all(AppConstants.defaultPadding),
+        padding: const EdgeInsets.all(AppConstants.defaultPadding),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -27,14 +29,14 @@ class HomeScreen extends StatelessWidget {
                 );
               },
             ),
-            SizedBox(height: AppConstants.defaultSpacing),
-            AppButton(
+            const SizedBox(height: AppConstants.defaultSpacing),
+            const AppButton(
               text: 'AWS',
               onPressed: null,
               isEnabled: false,
             ),
-            SizedBox(height: AppConstants.defaultSpacing),
-            AppButton(
+            const SizedBox(height: AppConstants.defaultSpacing),
+            const AppButton(
               text: 'Azure',
               onPressed: null,
               isEnabled: false,

@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import '../constants/app_constants.dart';
-import 'question_number_selection_screen.dart';
+import 'question_slider.dart';
 
-class QuestionRangeSelectionScreen extends StatefulWidget {
+class QuestionCheckbox extends StatefulWidget {
+  const QuestionCheckbox({super.key});
+
   @override
-  _QuestionRangeSelectionScreenState createState() => _QuestionRangeSelectionScreenState();
+  _QuestionCheckboxState createState() => _QuestionCheckboxState();
 }
 
-class _QuestionRangeSelectionScreenState extends State<QuestionRangeSelectionScreen> {
+class _QuestionCheckboxState extends State<QuestionCheckbox> {
   List<bool> selectedRanges = [false, false, false, false, false];
   
   List<Map<String, int>> ranges = [
@@ -34,10 +36,10 @@ class _QuestionRangeSelectionScreenState extends State<QuestionRangeSelectionScr
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Select a range of questions'),
+        title: const Text('Select a range of questions'),
       ),
       body: Padding(
-        padding: EdgeInsets.all(AppConstants.defaultPadding),
+        padding: const EdgeInsets.all(AppConstants.defaultPadding),
         child: Column(
           children: [
             Expanded(
@@ -61,7 +63,7 @@ class _QuestionRangeSelectionScreenState extends State<QuestionRangeSelectionScr
                 List<int> selectedIds = getSelectedQuestionIds();
                 if (selectedIds.isEmpty) {
                   ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(
+                    const SnackBar(
                       content: Text('Select at least one range of questions'),
                     ),
                   );
@@ -70,15 +72,15 @@ class _QuestionRangeSelectionScreenState extends State<QuestionRangeSelectionScr
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => QuestionNumberSelectionScreen(
+                    builder: (context) => QuestionSlider(
                       selectedQuestionIds: selectedIds,
                     ),
                   ),
                 );
               },
-              child: Text('Next'),
+              child: const Text('Next'),
             ),
-            SizedBox(height: AppConstants.defaultPadding),
+            const SizedBox(height: AppConstants.defaultPadding),
           ],
         ),
       ),

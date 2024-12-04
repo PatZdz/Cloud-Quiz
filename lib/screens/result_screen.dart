@@ -9,22 +9,22 @@ import 'quiz_screen.dart';
 class ResultScreen extends StatelessWidget {
   final QuizResult quizResult;
 
-  ResultScreen({required this.quizResult});
+  const ResultScreen({super.key, required this.quizResult});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Your Results'),
+        title: const Text('Your Results'),
       ),
       body: Padding(
-        padding: EdgeInsets.all(AppConstants.defaultPadding),
+        padding: const EdgeInsets.all(AppConstants.defaultPadding),
         child: Column(
           children: <Widget>[
             Container(
               width: double.infinity,
-              padding: EdgeInsets.all(AppConstants.defaultPadding),
-              margin: EdgeInsets.only(bottom: AppConstants.defaultPadding),
+              padding: const EdgeInsets.all(AppConstants.defaultPadding),
+              margin: const EdgeInsets.only(bottom: AppConstants.defaultPadding),
               decoration: BoxDecoration(
                 color: Colors.blue.withOpacity(0.1),
                 borderRadius:
@@ -32,7 +32,7 @@ class ResultScreen extends StatelessWidget {
               ),
               child: Text(
                 'You got ${quizResult.correctAnswers} out of ${quizResult.questions.length} correct!',
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 24.0,
                   fontWeight: FontWeight.bold,
                 ),
@@ -43,7 +43,7 @@ class ResultScreen extends StatelessWidget {
               child: ListView.separated(
                 itemCount: quizResult.questions.length,
                 separatorBuilder: (context, index) =>
-                    SizedBox(height: AppConstants.defaultSpacing),
+                    const SizedBox(height: AppConstants.defaultSpacing),
                 itemBuilder: (context, index) {
                   Question question = quizResult.questions[index];
                   List<int> userAnswers = quizResult.selectedAnswers[index];
@@ -72,7 +72,7 @@ class ResultScreen extends StatelessWidget {
                 },
               ),
             ),
-            SizedBox(height: AppConstants.defaultSpacing),
+            const SizedBox(height: AppConstants.defaultSpacing),
             AppButton(
               text: 'Restart',
               onPressed: () {
@@ -85,7 +85,7 @@ class ResultScreen extends StatelessWidget {
                 );
               },
             ),
-            SizedBox(height: AppConstants.defaultSpacing),
+            const SizedBox(height: AppConstants.defaultSpacing),
             AppButton(
               text: 'Next Quiz',
               onPressed: () {
@@ -98,14 +98,14 @@ class ResultScreen extends StatelessWidget {
                 );
               },
             ),
-            SizedBox(height: AppConstants.defaultSpacing),
+            const SizedBox(height: AppConstants.defaultSpacing),
             AppTextButton(
               text: 'Home',
               onPressed: () {
                 Navigator.popUntil(context, (route) => route.isFirst);
               },
             ),
-            SizedBox(height: AppConstants.defaultSpacing),
+            const SizedBox(height: AppConstants.defaultSpacing),
           ],
         ),
       ),

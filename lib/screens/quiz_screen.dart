@@ -11,12 +11,12 @@ class QuizScreen extends StatefulWidget {
   final List<Question>? predefinedQuestions;
   final List<int>? selectedQuestionIds;
 
-  QuizScreen({
+  const QuizScreen({super.key, 
     this.questionCount,
     this.selectedQuestionIds,
   }) : predefinedQuestions = null;
 
-  QuizScreen.withQuestions({required List<Question> questions})
+  const QuizScreen.withQuestions({super.key, required List<Question> questions})
       : predefinedQuestions = questions,
         questionCount = questions.length,
         selectedQuestionIds = null;
@@ -110,12 +110,12 @@ class _QuizScreenState extends State<QuizScreen> {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(AppConstants.defaultPadding),
+          padding: const EdgeInsets.all(AppConstants.defaultPadding),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               Container(
-                padding: EdgeInsets.all(AppConstants.defaultPadding),
+                padding: const EdgeInsets.all(AppConstants.defaultPadding),
                 decoration: BoxDecoration(
                   color: Colors.blue.withOpacity(0.1),
                   borderRadius: BorderRadius.circular(AppConstants.defaultBorderRadius),
@@ -125,10 +125,10 @@ class _QuizScreenState extends State<QuizScreen> {
                   children: [
                     Text(
                       currentQuestion.question,
-                      style: TextStyle(fontSize: 18.0, height: 1.4),
+                      style: const TextStyle(fontSize: 18.0, height: 1.4),
                     ),
                     if (currentQuestion.secondCorrectAnswerIndex != null)
-                      Padding(
+                      const Padding(
                         padding: EdgeInsets.only(top: 8.0),
                         child: Text(
                           'Choose two correct answers',
@@ -141,22 +141,22 @@ class _QuizScreenState extends State<QuizScreen> {
                   ],
                 ),
               ),
-              SizedBox(height: AppConstants.defaultSpacing * 2),
+              const SizedBox(height: AppConstants.defaultSpacing * 2),
               ...options.asMap().entries.map((entry) {
                 int index = entry.key;
                 String text = entry.value;
                 bool isSelected = temporaryAnswers.contains(index);
 
                 return Padding(
-                  padding: EdgeInsets.only(bottom: AppConstants.defaultSpacing),
+                  padding: const EdgeInsets.only(bottom: AppConstants.defaultSpacing),
                   child: AppButton(
                     text: text,
                     isSelected: isSelected,
                     onPressed: () => selectAnswer(index),
                   ),
                 );
-              }).toList(),
-              SizedBox(height: AppConstants.defaultSpacing),
+              }),
+              const SizedBox(height: AppConstants.defaultSpacing),
             ],
           ),
         ),

@@ -4,6 +4,8 @@ import '../data/questions.dart';
 import 'quiz_screen.dart';
 
 class QuestionPackSelectionScreen extends StatefulWidget {
+  const QuestionPackSelectionScreen({super.key});
+
   @override
   _QuestionPackSelectionScreenState createState() => _QuestionPackSelectionScreenState();
 }
@@ -42,7 +44,7 @@ class _QuestionPackSelectionScreenState extends State<QuestionPackSelectionScree
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Choose Question Packs'),
+        title: const Text('Choose Question Packs'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -59,7 +61,7 @@ class _QuestionPackSelectionScreenState extends State<QuestionPackSelectionScree
                 },
               );
             }),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Text('Select the number of questions: $questionCount'),
             Slider(
               value: questionCount.toDouble(),
@@ -75,7 +77,7 @@ class _QuestionPackSelectionScreenState extends State<QuestionPackSelectionScree
             ),
             ElevatedButton(
               onPressed: _startQuiz,
-              child: Text('Start Quiz'),
+              child: const Text('Start Quiz'),
             ),
           ],
         ),

@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import '../constants/app_constants.dart';
 import 'quiz_screen.dart';
 
-class QuestionNumberSelectionScreen extends StatefulWidget {
+class QuestionSlider extends StatefulWidget {
   final List<int> selectedQuestionIds;
 
-  QuestionNumberSelectionScreen({required this.selectedQuestionIds});
+  const QuestionSlider({super.key, required this.selectedQuestionIds});
 
   @override
-  _QuestionNumberSelectionScreenState createState() => _QuestionNumberSelectionScreenState();
+  _QuestionSliderState createState() => _QuestionSliderState();
 }
 
-class _QuestionNumberSelectionScreenState extends State<QuestionNumberSelectionScreen> {
+class _QuestionSliderState extends State<QuestionSlider> {
   late int questionCount;
   late int maxQuestions;
 
@@ -27,9 +27,9 @@ class _QuestionNumberSelectionScreenState extends State<QuestionNumberSelectionS
     if (maxQuestions == 0) {
       return Scaffold(
         appBar: AppBar(
-          title: Text('Select the number of questions'),
+          title: const Text('Select the number of questions'),
         ),
-        body: Center(
+        body: const Center(
           child: Text('No selected questions'),
         ),
       );
@@ -37,20 +37,20 @@ class _QuestionNumberSelectionScreenState extends State<QuestionNumberSelectionS
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Select the number of questions'),
+        title: const Text('Select the number of questions'),
       ),
       body: Padding(
-        padding: EdgeInsets.all(AppConstants.defaultPadding),
+        padding: const EdgeInsets.all(AppConstants.defaultPadding),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Text(
               'Selected number of questions: $questionCount',
-              style: TextStyle(fontSize: 18),
+              style: const TextStyle(fontSize: 18),
               textAlign: TextAlign.center,
             ),
-            SizedBox(height: AppConstants.defaultSpacing),
+            const SizedBox(height: AppConstants.defaultSpacing),
             Slider(
               value: questionCount.toDouble(),
               min: 1,
@@ -63,7 +63,7 @@ class _QuestionNumberSelectionScreenState extends State<QuestionNumberSelectionS
                 });
               },
             ),
-            SizedBox(height: AppConstants.defaultSpacing * 2),
+            const SizedBox(height: AppConstants.defaultSpacing * 2),
             ElevatedButton(
               onPressed: maxQuestions > 0 ? () {
                 Navigator.push(
@@ -76,7 +76,7 @@ class _QuestionNumberSelectionScreenState extends State<QuestionNumberSelectionS
                   ),
                 );
               } : null,
-              child: Text('Start Quiz'),
+              child: const Text('Start Quiz'),
             ),
           ],
         ),

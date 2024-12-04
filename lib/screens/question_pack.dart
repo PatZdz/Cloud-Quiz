@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
 import '../widgets/app_button.dart';
 import '../constants/app_constants.dart';
-import 'question_range_selection_screen.dart';
+import 'question_checkbox.dart';
 
 class QuestionPackScreen extends StatelessWidget {
+  const QuestionPackScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Select a question package'),
+        title: const Text('Select a question package'),
       ),
       body: Padding(
-        padding: EdgeInsets.all(AppConstants.defaultPadding),
+        padding: const EdgeInsets.all(AppConstants.defaultPadding),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -22,7 +24,7 @@ class QuestionPackScreen extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => QuestionRangeSelectionScreen(),
+                    builder: (context) => QuestionCheckbox(),
                   ),
                 );
               },

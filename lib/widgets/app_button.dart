@@ -19,7 +19,7 @@ class AppButton extends StatelessWidget {
     final ButtonStyle style;
     if (!isEnabled) {
       style = AppButtonStyles.primaryButton.copyWith(
-        backgroundColor: MaterialStateProperty.all(Colors.grey),
+        backgroundColor: WidgetStateProperty.all(Colors.grey),
       );
     } else if (isSelected) {
       style = AppButtonStyles.selectedButton;
@@ -39,7 +39,7 @@ class AppTextButton extends StatelessWidget {
   final String text;
   final VoidCallback onPressed;
 
-  const AppTextButton({
+  const AppTextButton({super.key, 
     required this.text,
     required this.onPressed,
   });

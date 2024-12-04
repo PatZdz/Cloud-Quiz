@@ -5,13 +5,13 @@ class AppTheme {
     return ThemeData(
       primarySwatch: Colors.blue,
       scaffoldBackgroundColor: Colors.white,
-      appBarTheme: AppBarTheme(
+      appBarTheme: const AppBarTheme(
         elevation: 0,
         centerTitle: true,
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-          textStyle: TextStyle(fontSize: 18),
+          textStyle: const TextStyle(fontSize: 18),
         ),
       ),
     );
