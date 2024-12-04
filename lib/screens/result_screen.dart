@@ -87,15 +87,40 @@ class ResultScreen extends StatelessWidget {
             ),
             const SizedBox(height: AppConstants.defaultSpacing),
             AppButton(
-              text: 'Next Quiz',
+              text: 'Repeat mistakes',
               onPressed: () {
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) =>
-                        QuizScreen(questionCount: quizResult.questions.length),
-                  ),
-                );
+                List<Question> incorrectQuestions = [];
+                for (int i = 0; i < quizResult.questions.length; i++) {
+                  Question question = quizResult.questions[i];
+                  List<int> userAnswers = quizResult.selectedAnswers[i];
+                  bool isCorrect;
+
+                  if (question.secondCorrectAnswerIndex != null) {
+                    List<int> correctAnswers = [
+                      question.correctAnswerIndex,
+                      question.secondCorrectAnswerIndex!
+                    ];
+                    isCorrect = userAnswers.toSet().containsAll(correctAnswers) &&
+                        userAnswers.length == correctAnswers.length;
+                  } else {
+                    isCorrect = userAnswers.isNotEmpty &&
+                        userAnswers[0] == question.correctAnswerIndex;
+                  }
+
+                  if (!isCorrect) {
+                    incorrectQuestions.add(question);
+                  }
+                }
+
+                if (incorrectQuestions.isNotEmpty) {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) =>
+                          QuizScreen.withQuestions(questions: incorrectQuestions),
+                    ),
+                  );
+                }
               },
             ),
             const SizedBox(height: AppConstants.defaultSpacing),
@@ -104,8 +129,7 @@ class ResultScreen extends StatelessWidget {
               onPressed: () {
                 Navigator.popUntil(context, (route) => route.isFirst);
               },
-            ),
-            const SizedBox(height: AppConstants.defaultSpacing),
+            ),            const SizedBox(height: AppConstants.defaultSpacing),
           ],
         ),
       ),
