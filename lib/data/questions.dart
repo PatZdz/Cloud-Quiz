@@ -35,8 +35,7 @@ List<Question> allQuestions = [
   Question(
     id: 3,
     topic: 'Storage',
-    question:
-        'What is the difference between Standard and Coldline storage?',
+    question: 'What is the difference between Standard and Coldline storage?',
     options: [
       'Standard and Coldline storage use different APIs.',
       'Coldline storage is for infrequently accessed data.',
@@ -775,8 +774,7 @@ List<Question> allQuestions = [
   Question(
     id: 56,
     topic: 'Cloud SQL and Business Insights',
-    question:
-        'How does Cloud SQL help organizations create business insights?',
+    question: 'How does Cloud SQL help organizations create business insights?',
     options: [
       'Generates real-time charts and intelligent analytics',
       'Generates predictions using machine learning models',
@@ -1251,8 +1249,7 @@ List<Question> allQuestions = [
   Question(
     id: 90,
     topic: 'Logging in Cloud Technology',
-    question:
-        'What is logging within the context of cloud technology?',
+    question: 'What is logging within the context of cloud technology?',
     options: [
       'Recording infrastructure and hardware expenditure',
       'Tracking source code across an organization',
@@ -1532,8 +1529,7 @@ List<Question> allQuestions = [
   Question(
     id: 110,
     topic: 'Looker Benefits',
-    question:
-        'How would an organization benefit from using Looker?',
+    question: 'How would an organization benefit from using Looker?',
     options: [
       'Robust data roll-back accuracy',
       'Leading serverless warehousing technology',
@@ -1546,8 +1542,7 @@ List<Question> allQuestions = [
   Question(
     id: 111,
     topic: 'Data Privacy Policy',
-    question:
-        'Which policy helps Google Cloud keep customer data private?',
+    question: 'Which policy helps Google Cloud keep customer data private?',
     options: [
       'Google does not allow customers to change encryption keys.',
       'Google tests the service availability of customer applications.',
@@ -1560,8 +1555,7 @@ List<Question> allQuestions = [
   Question(
     id: 112,
     topic: 'Data Security',
-    question:
-        'Why is data stored in Google Cloud secure and private?',
+    question: 'Why is data stored in Google Cloud secure and private?',
     options: [
       'Data is encrypted by the Security Command Center',
       'Data is encrypted when an appropriate tag is applied',
@@ -1770,8 +1764,7 @@ List<Question> allQuestions = [
   Question(
     id: 127,
     topic: 'Artificial Intelligence Definition',
-    question:
-        'What is artificial intelligence?',
+    question: 'What is artificial intelligence?',
     options: [
       'Any system capable of a task that requires smart analytics to generate predictions',
       'Any system capable of a task that normally requires human cognition',
@@ -1924,8 +1917,7 @@ List<Question> allQuestions = [
   Question(
     id: 138,
     topic: 'Privacy in Cloud Technology',
-    question:
-        'How is privacy defined in the context of cloud technology?',
+    question: 'How is privacy defined in the context of cloud technology?',
     options: [
       'Procedures to authenticate user identity',
       'Compliance with regulatory standards',
@@ -2050,8 +2042,7 @@ List<Question> allQuestions = [
   Question(
     id: 147,
     topic: 'Monitoring in Cloud Operations',
-    question:
-        'What is monitoring within the context of cloud operations?',
+    question: 'What is monitoring within the context of cloud operations?',
     options: [
       'Tracking user activities to guarantee compliance with privacy regulations',
       'Observing cloud expenditure in real time to ensure that budgets are not exceeded',
@@ -2064,8 +2055,7 @@ List<Question> allQuestions = [
   Question(
     id: 148,
     topic: 'Cloud Debugger Benefits',
-    question:
-        'What does Cloud Debugger help an organization do?',
+    question: 'What does Cloud Debugger help an organization do?',
     options: [
       'Inspect source code in real time without affecting user downtime.',
       'Analyze live source code during user downtime.',
@@ -2078,8 +2068,7 @@ List<Question> allQuestions = [
   Question(
     id: 149,
     topic: 'Cloud Logging Benefits',
-    question:
-        'What does Cloud Logging help an organization do?',
+    question: 'What does Cloud Logging help an organization do?',
     options: [
       'Analyze logs and accelerate application troubleshooting.',
       'Manage storage of custom VM images.',
@@ -2274,8 +2263,7 @@ List<Question> allQuestions = [
   Question(
     id: 163,
     topic: 'OpEx Model for Cloud Security',
-    question:
-        'What is a benefit of the OpEx model for cloud security?',
+    question: 'What is a benefit of the OpEx model for cloud security?',
     options: [
       'Organizations do not need to configure any security settings for cloud resources.',
       'Organizations do not need to make upfront capital investments in cloud security.',
@@ -2802,12 +2790,11 @@ List<Question> allQuestions = [
     ],
     correctAnswerIndex: 0,
   ),
-   // Question 201
+  // Question 201
   Question(
     id: 201,
     topic: 'Defining Feature of a Non-Relational Database',
-    question:
-        'What is a defining feature of a non-relational database?',
+    question: 'What is a defining feature of a non-relational database?',
     options: [
       'Reporting across multiple data sources',
       'A flexible data model',
@@ -2820,8 +2807,7 @@ List<Question> allQuestions = [
   Question(
     id: 202,
     topic: 'Data Encryption in Google Cloud',
-    question:
-        'When is data automatically encrypted in Google Cloud?',
+    question: 'When is data automatically encrypted in Google Cloud?',
     options: [
       'When it is in transit only',
       'When it is at rest and in transit.',
@@ -2890,8 +2876,7 @@ List<Question> allQuestions = [
   Question(
     id: 207,
     topic: 'Streaming Analytics',
-    question:
-        'What is a defining function of streaming analytics?',
+    question: 'What is a defining function of streaming analytics?',
     options: [
       'Accessing data with high latency',
       'Processing data records continuously',
@@ -3002,8 +2987,7 @@ List<Question> allQuestions = [
   Question(
     id: 215,
     topic: 'Unified Cloud Data Solution',
-    question:
-        'What is the benefit of using a unified cloud data solution?',
+    question: 'What is the benefit of using a unified cloud data solution?',
     options: [
       'Data can enable innovation because it\'s no longer siloed.',
       'Data can be automatically secured from external threats.',
@@ -3030,8 +3014,7 @@ List<Question> allQuestions = [
   Question(
     id: 217,
     topic: 'Unstructured Data Example',
-    question:
-        'What is an example of unstructured data?',
+    question: 'What is an example of unstructured data?',
     options: [
       'Product ratings',
       'Customer orders',
@@ -3199,8 +3182,7 @@ List<Question> allQuestions = [
   Question(
     id: 229,
     topic: 'Machine Learning Use Cases',
-    question:
-        'Which scenario is a good use case for machine learning?',
+    question: 'Which scenario is a good use case for machine learning?',
     options: [
       'Solving ethical dilemmas',
       'Classifying data with no prior examples',
@@ -3227,8 +3209,7 @@ List<Question> allQuestions = [
   Question(
     id: 231,
     topic: 'Generative AI',
-    question:
-        'What is generative AI?',
+    question: 'What is generative AI?',
     options: [
       'A machine learning model for language translation',
       'An AI model for labeling images',
@@ -3264,5 +3245,746 @@ List<Question> allQuestions = [
       'Outgoing data transfer must be enabled in the Google Cloud console.',
     ],
     correctAnswerIndex: 1,
+  ),
+// Question 234
+  Question(
+    id: 234,
+    topic: 'Four Golden Signals',
+    question:
+        'An organization is concerned that one of their applications takes too long to return a result. According to Google’s “Four Golden Signals,” which signal measures this aspect of the application’s performance?',
+    options: [
+      'Traffic',
+      'Latency',
+      'Errors',
+      'Saturation',
+    ],
+    correctAnswerIndex: 1,
+  ),
+// Question 235
+  Question(
+    id: 235,
+    topic: 'Data Sovereignty',
+    question: 'How does the legal concept of data sovereignty affect data?',
+    options: [
+      'Data is subject to the laws and regulations of the country where it resides.',
+      'A country has the right to access the data generated within its borders.',
+      'An individual has the right to control their personal data.',
+      'Data must always be encrypted in transit and at rest.',
+    ],
+    correctAnswerIndex: 0,
+  ),
+// Question 236
+  Question(
+    id: 236,
+    topic: 'Serverless Computing',
+    question:
+        'An organization has a small development team that has created a web application which runs in a single container. They need a simple, serverless, and scalable way to host their container. Which Google service should the organization use?',
+    options: [
+      'App Engine',
+      'Cloud Run',
+      'Compute Engine',
+      'Kubernetes Engine',
+    ],
+    correctAnswerIndex: 1,
+  ),
+// Question 237
+  Question(
+    id: 237,
+    topic: 'Shared Responsibility Model',
+    question:
+        'An organization has migrated all workloads to the cloud and is reviewing their cloud security posture. Who is now responsible for securing the physical infrastructure of the data centers?',
+    options: [
+      'The cloud service provider',
+      'The organization and the cloud service provider',
+      'The organization',
+      'Third-party security service providers',
+    ],
+    correctAnswerIndex: 0,
+  ),
+// Question 238
+  Question(
+    id: 238,
+    topic: 'Google Cloud Support Plans',
+    question:
+        'An organization is running critical workloads in production and requires a Google Cloud support service with fast response times and a dedicated Technical Account Manager. Which customer care service level should the organization choose?',
+    options: [
+      'Basic',
+      'Premium',
+      'Enhanced',
+      'Standard',
+    ],
+    correctAnswerIndex: 1,
+  ),
+// Question 239
+  Question(
+    id: 239,
+    topic: 'Data Security in Google Cloud',
+    question:
+        'An organization is concerned about the unlikely event that Google Cloud infrastructure is physically accessed by someone with malicious intent. How is data protected in Google Cloud?',
+    options: [
+      'Data is stored on quantum computers with unbreakable encryption.',
+      'Data is stored in random locations around the world to prevent it being found.',
+      'Data is stored using robust encryption.',
+      'Data is immediately deleted whenever an intrusion is detected.',
+    ],
+    correctAnswerIndex: 2,
+  ),
+// Question 240
+  Question(
+    id: 240,
+    topic: 'APIs and Monetization',
+    question:
+        'An organization stores its important industry data in a relational database. They want to create a new revenue stream by enabling third parties to use that data in their applications. Which cloud first approach should the organization choose?',
+    options: [
+      'Expose data through a chargeable API.',
+      'Transfer data into a non-relational database.',
+      'Offer chargeable downloads of archived data.',
+      'Add third-party users to their database.',
+    ],
+    correctAnswerIndex: 0,
+  ),
+// Question 241
+  Question(
+    id: 241,
+    topic: 'Resource Hierarchy and Security Policies',
+    question:
+        'How does the resource hierarchy in Google Cloud help organizations implement security policies?',
+    options: [
+      'Policies can only be applied at the organization level and affect all projects.',
+      'Projects in the resource hierarchy are not affected by security policies.',
+      'Policies can only be applied to individual projects.',
+      'Policies can be applied at the folder level and are inherited by projects inside the folder.',
+    ],
+    correctAnswerIndex: 3,
+  ),
+// Question 242
+  Question(
+    id: 242,
+    topic: 'NoSQL Databases',
+    question:
+        'An organization needs a flexible and scalable NoSQL database with strong web and mobile application support. Which Google Cloud product or service should the organization use?',
+    options: [
+      'Cloud Storage',
+      'Cloud Spanner',
+      'BigQuery',
+      'Firestore',
+    ],
+    correctAnswerIndex: 3,
+  ),
+// Question 243
+  Question(
+    id: 243,
+    topic: 'Machine Learning with BigQuery ML',
+    question:
+        'A vacation home rental organization wants to predict the popularity of properties in their upcoming busy season. They do not have a data science team, and want to use their in-house database administration skills to create a machine learning model. What should the organization do?',
+    options: [
+      'Use BigQuery ML and create models using SQL.',
+      'Use custom training in Vertex AI with TensorFlow.',
+      'Build a model in AutoML using labeled data.',
+      'Integrate pre-trained APIs into their application.',
+    ],
+    correctAnswerIndex: 0,
+  ),
+// Question 244
+  Question(
+    id: 244,
+    topic: 'Data Value Chain',
+    question:
+        'An organization is transforming their raw data into a format that can be used to derive business insights. Which step of the data value chain does this action represent?',
+    options: [
+      'Data storage',
+      'Data processing',
+      'Data collection',
+      'Data analysis',
+    ],
+    correctAnswerIndex: 1,
+  ),
+// Question 245
+  Question(
+    id: 245,
+    topic: 'Data Governance',
+    question:
+        'An organization has migrated several large databases to the cloud. It wants to increase the value of its data, improve cost controls and strengthen regulatory compliance. What should the organization do?',
+    options: [
+      'Delete data stored for over a year.',
+      'Establish an effective data governance program.',
+      'Export relational data to modern NoSQL databases.',
+      'Create monthly reports on data access and uses.',
+    ],
+    correctAnswerIndex: 1,
+  ),
+// Question 246
+  Question(
+    id: 246,
+    topic: 'Cloud Cost Management',
+    question:
+        'An organization is concerned about their cloud costs. They want to be informed when their spending exceeds a specific threshold, rather than waiting to see their bill at the end of the month. What should the organization do?',
+    options: [
+      'Adjust project resource quota policies.',
+      'Use historical cost data to predict future overspend.',
+      'Pause virtual machines during non-business hours.',
+      'Configure a budget threshold rule and alert.',
+    ],
+    correctAnswerIndex: 3,
+  ),
+// Question 247
+  Question(
+    id: 247,
+    topic: 'Cloud Monitoring and Observability',
+    question:
+        'An organization wants a centralized view of their cloud infrastructure in a fully managed system that includes uptime checks. Which Google Cloud service should they use?',
+    options: [
+      'Cloud Trace',
+      'Cloud Monitoring',
+      'Cloud Profiler',
+      'Cloud Logging',
+    ],
+    correctAnswerIndex: 1,
+  ),
+// Question 248
+  Question(
+    id: 248,
+    topic: 'Machine Learning with Unstructured Data',
+    question:
+        'Which scenario uses machine learning to unlock business value from unstructured data?',
+    options: [
+      'Recommending new products based on previous purchases.',
+      'Monitoring financial transactions to identify potential fraud and risk.',
+      'Analyzing tabular records of product defects to predict future maintenance cycles.',
+      'Determining customer sentiments from call center voice recordings.',
+    ],
+    correctAnswerIndex: 3,
+  ),
+// Question 249
+  Question(
+    id: 249,
+    topic: 'Data Preparation for Machine Learning',
+    question:
+        'A cinema company wants to build a model to predict customer visit patterns for the coming year. They have three years of customer visit data across 300 theaters; however, the data has been stored in different formats by different theaters. They must train the ML model. What should they do?',
+    options: [
+      'Choose an ML model type that can process different formats of input data.',
+      'Use the last year of data so there are fewer inconsistencies for the model to handle.',
+      'Group different format types and train a different model for each group.',
+      'Transform the data into a consistent format.',
+    ],
+    correctAnswerIndex: 3,
+  ),
+// Question 250
+  Question(
+    id: 250,
+    topic: 'Kubernetes Management',
+    question:
+        'An organization is running Kubernetes applications across multiple cloud environments. They want a consistent and centralized management platform. Which service should they choose?',
+    options: [
+      'GKE Enterprise',
+      'Cloud Functions',
+      'Cloud Run',
+      'Compute Engine',
+    ],
+    correctAnswerIndex: 0,
+  ),
+// Question 251
+  Question(
+    id: 251,
+    topic: 'Storage Solutions for Unstructured Data',
+    question:
+        'An organization has a large archive of unstructured data, including video and audio files. Which storage solution should the organization use?',
+    options: [
+      'Cloud SQL',
+      'Cloud Bigtable',
+      'Cloud Spanner',
+      'Cloud Storage',
+    ],
+    correctAnswerIndex: 3,
+  ),
+// Question 252
+  Question(
+    id: 252,
+    topic: 'Managed Kubernetes Services',
+    question:
+        'An organization is developing applications by using Kubernetes. They want their teams to spend more time developing rather than managing clusters. Which Google Cloud service should the organization choose?',
+    options: [
+      'GKE Autopilot',
+      'GKE Standard',
+      'Cloud Run',
+      'Compute Engine',
+    ],
+    correctAnswerIndex: 0,
+  ),
+// Question 253
+  Question(
+    id: 253,
+    topic: 'Sustainability with Cloud Services',
+    question:
+        'An organization supplies electric car chargers in a nationwide network. They store customer and charging data in BigQuery. They want to efficiently upgrade and maintain their network to reduce waste and achieve their sustainability goals. How can Google Cloud services help the organization?',
+    options: [
+      'Move data from BigQuery to Cloud Storage to reduce storage costs.',
+      'Provide access to third-party developers by creating an API using Apigee.',
+      'Create a model in BigQuery to predict future maintenance schedules.',
+      'Secure data access by using Identity and Access Management.',
+    ],
+    correctAnswerIndex: 2,
+  ),
+// Question 254
+  Question(
+    id: 254,
+    topic: 'Network Latency',
+    question:
+        'An organization is hosting an application in Europe, and customers in Asia are reporting slow response times despite their fast internet connection. What is the problem?',
+    options: [
+      'Network latency',
+      'Not enough application servers',
+      'Network bandwidth',
+      'Misconfigured application servers',
+    ],
+    correctAnswerIndex: 0,
+  ),
+// Question 255
+  Question(
+    id: 255,
+    topic: 'Network Security',
+    question:
+        'An organization wants to control what types of network traffic are allowed to enter and leave its network and access its applications. Which security measure should the organization use?',
+    options: [
+      'Firewall rules',
+      'Privileged access',
+      '2-Step Verification',
+      'Encryption keys',
+    ],
+    correctAnswerIndex: 0,
+  ),
+// Question 256
+  Question(
+    id: 256,
+    topic: 'Cloud Service Models',
+    question:
+        'An organization wants to run their custom application in the cloud in a flexible and scalable way without managing any infrastructure. Which service model should they use?',
+    options: [
+      'Infrastructure as a service',
+      'Network as a service',
+      'Software as a service',
+      'Platform as a service',
+    ],
+    correctAnswerIndex: 3,
+  ),
+// Question 257
+  Question(
+    id: 257,
+    topic: 'Digital Transformation',
+    question:
+        'An organization is using new technologies to change its business processes and culture to develop new customer experiences and adapt to market dynamics. What is the name of this approach?',
+    options: [
+      'Operations optimization',
+      'User personalization',
+      'Data center migration',
+      'Digital transformation',
+    ],
+    correctAnswerIndex: 3,
+  ),
+// Question 258
+  Question(
+    id: 258,
+    topic: 'Application Deployment Across Regions',
+    question:
+        'Customers are reporting very high latencies when accessing an application from the United States. The application is currently running in a single region in Europe. What should the organization do?',
+    options: [
+      'Set up a new billing account in the United States.',
+      'Run the application in additional zones in the European region.',
+      'Run the application in additional regions in Europe.',
+      'Run a replica of the application in a region in the United States.',
+    ],
+    correctAnswerIndex: 3,
+  ),
+// Question 259
+  Question(
+    id: 259,
+    topic: 'Natural Language Processing',
+    question:
+        'An organization has a large dataset that contains text transcripts of conversations between their customers and service representatives. They want an automated solution to identify the topics their customers care most about. Which service should the organization use?',
+    options: [
+      'Natural Language API',
+      'Vision API',
+      'Cloud Translation API',
+      'Speech-to-Text API',
+    ],
+    correctAnswerIndex: 0,
+  ),
+// Question 260
+  Question(
+    id: 260,
+    topic: 'Data Warehousing and Analytics',
+    question:
+        'An organization wants to analyze data in a data warehouse. How should they proceed?',
+    options: [
+      'Copy unstructured data into a single large object store.',
+      'Choose a system to store structured and semi-structured data that supports ad-hoc analysis and custom reporting.',
+      'Import data into a semi-structured time-series database.',
+      'Ensure data is stored in structured tables and rows to support transactional queries and relationships.',
+    ],
+    correctAnswerIndex: 1,
+  ),
+// Question 261
+  Question(
+    id: 261,
+    topic: 'Resource Hierarchy and IAM Policies',
+    question:
+        'An organization is deciding on the layout of their resource hierarchy in Google Cloud. They have several projects within a folder. What will happen when user access policies are applied to the folder?',
+    options: [
+      'The policy will be inherited by the projects and their resources within the folder.',
+      'The policy will be applied to all folders within the organization.',
+      'The policy applies to the folder only, and will not be inherited by any projects.',
+      'The policy will be inherited by the projects in the folder but will not affect their resources.',
+    ],
+    correctAnswerIndex: 0,
+  ),
+// Question 262
+  Question(
+    id: 262,
+    topic: 'Data Quality Dimensions',
+    question:
+        'A retail organization is training a model to recommend products to customers for an ecommerce website. The model was trained on previous purchases, but did not include demographic information on each buyer. What dimension of the data is responsible for the model\'s poor performance?',
+    options: [
+      'Completeness',
+      'Validity',
+      'Accuracy',
+      'Timeliness',
+    ],
+    correctAnswerIndex: 0,
+  ),
+// Question 263
+  Question(
+    id: 263,
+    topic: 'Customer Retention with Machine Learning',
+    question:
+        'A financial organization has many customers who close their accounts every year. The organization wants to use data and AI to identify at-risk customers, so they can retain customers by offering discounts and improved services. What should the organization do?',
+    options: [
+      'Create a report based on last year’s customer feedback.',
+      'Create a survey for all customers to identify their current level of satisfaction.',
+      'Create a dashboard of previous customers that have exited, and look for obvious correlations in the visualization.',
+      'Create a ML model based on the demographics and activities of previous customers that exited.',
+    ],
+    correctAnswerIndex: 3,
+  ),
+// Question 264
+  Question(
+    id: 264,
+    topic: 'Container Orchestration with Kubernetes Engine',
+    question:
+        'An organization is operating multiple workloads in containers and requires full control of how the workloads are configured. Which Google Cloud service should the organization use?',
+    options: [
+      'Kubernetes Engine',
+      'Compute Engine',
+      'Cloud Functions',
+      'Cloud Run',
+    ],
+    correctAnswerIndex: 0,
+  ),
+// Question 265
+  Question(
+    id: 265,
+    topic: 'Cost Optimization with Preemptible VMs',
+    question:
+        'An organization runs a batch data analysis workload on a virtual machine (VM). The workload can be easily restarted without losing work, and is not time critical. Organizations must choose the lowest cost option to run the workload. What option should they choose?',
+    options: [
+      'A Cloud Function with a small memory limit',
+      'A standard VM in a pay-as-you-go model on Compute Engine',
+      'A custom VM in a pay-as-you-go model on Compute Engine',
+      'A Preemptible or Spot VM on Compute Engine',
+    ],
+    correctAnswerIndex: 3,
+  ),
+// Question 266
+  Question(
+    id: 266,
+    topic: 'Google\'s Purpose-built Servers',
+    question:
+        'What is a benefit of Google’s purpose-built servers compared to standard servers?',
+    options: [
+      'They are backward compatible with legacy disk drives.',
+      'They run software that cannot be deployed on standard servers.',
+      'They are cheaper to build than standard servers.',
+      'They are optimized for specific tasks making them more efficient.',
+    ],
+    correctAnswerIndex: 3,
+  ),
+// Question 267
+  Question(
+    id: 267,
+    topic: 'Relational Databases',
+    question:
+        'An organization needs to store daily transactional data such as customer records and purchase history. The data follows a consistent schema and is cross-referenced. Which type of service should the organization use?',
+    options: [
+      'Data warehouse',
+      'Relational database',
+      'Non-relational database',
+      'Data lake',
+    ],
+    correctAnswerIndex: 1,
+  ),
+// Question 268
+  Question(
+    id: 268,
+    topic: 'APIs',
+    question:
+        'What is the purpose of an application programming interface (API)?',
+    options: [
+      'To manage multiple containerized workloads',
+      'To connect networks from different cloud providers',
+      'To provide a set of instructions that allow computer programs to communicate with each other',
+      'To provide cloud plugins for integrated development environments',
+    ],
+    correctAnswerIndex: 2,
+  ),
+// Question 269
+  Question(
+    id: 269,
+    topic: 'AutoML',
+    question:
+        'A manufacturing organization has a large collection of images labeled as intact or defective parts. They want to use this data to build a simple solution to detect faulty parts on their production line. They have no data science expertise. Which solution should they use?',
+    options: [
+      'Pre-trained APIs',
+      'Document AI',
+      'Discovery AI for Retail',
+      'AutoML',
+    ],
+    correctAnswerIndex: 3,
+  ),
+// Question 270
+  Question(
+    id: 270,
+    topic: 'Transactional Databases',
+    question:
+        'An organization has an ecommerce application that requires a cost-effective, transactional database. The application will only serve customers in a single region. Which service should they use?',
+    options: [
+      'Cloud Bigtable',
+      'Cloud Spanner',
+      'Cloud SQL',
+      'BigQuery',
+    ],
+    correctAnswerIndex: 2,
+  ),
+// Question 271
+  Question(
+    id: 271,
+    topic: 'Stream Processing',
+    question:
+        'An organization processes batch sales data at the end of every month to analyze sales trends and derive business insights. They want to improve accuracy and make near real-time decisions. What should the organization do?',
+    options: [
+      'Switch from batch processing to stream processing.',
+      'Filter the data so reports are generated faster.',
+      'Process batch reports weekly instead of monthly.',
+      'Change from a relational database to a NoSQL database.',
+    ],
+    correctAnswerIndex: 0,
+  ),
+// Question 272
+  Question(
+    id: 272,
+    topic: 'Compute Engine Discounts',
+    question:
+        'An organization is using Compute Engine and wants to receive sustained-use discounts. What should the organization do?',
+    options: [
+      'Commit to virtual machine usage for a one or three-year period.',
+      'Choose preemptible or spot instances when creating virtual machines.',
+      'Choose low-powered virtual machines.',
+      'Nothing. Sustained use discounts are automatically applied.',
+    ],
+    correctAnswerIndex: 3,
+  ),
+// Question 273
+  Question(
+    id: 273,
+    topic: 'VMware Migration',
+    question:
+        'An organization has a large VMWare environment that they want to migrate to the cloud. They want to retain existing operational processes and tools. Which Google Cloud service should the organization use?',
+    options: [
+      'VMWare vSphere',
+      'Bare Metal Solution',
+      'Compute Engine',
+      'Google Cloud VMware Engine',
+    ],
+    correctAnswerIndex: 3,
+  ),
+// Question 274
+  Question(
+    id: 274,
+    topic: 'Compliance and Certifications',
+    question:
+        'An information security organization must ensure that its service providers have ISO 27001 certification. They must also access supporting documentation. Which Google Cloud tool should they use?',
+    options: [
+      'Security Command Center',
+      'Network Intelligence Center',
+      'Compliance Reports Manager',
+      'Cloud Monitoring',
+    ],
+    correctAnswerIndex: 2,
+  ),
+// Question 275
+  Question(
+    id: 275,
+    topic: 'Shared Responsibility Model',
+    question:
+        'An organization is deploying their servers to the cloud using the infrastructure as a service model. In the shared responsibility model, what is the cloud provider responsible for?',
+    options: [
+      'Physical security',
+      'Data access policies',
+      'Security of the operating system',
+      'Security of the software',
+    ],
+    correctAnswerIndex: 0,
+  ),
+// Question 276
+  Question(
+    id: 276,
+    topic: 'Hardware Accelerators for Machine Learning',
+    question:
+        'An organization is building advanced machine learning models in Google Cloud by using TensorFlow. They want to develop their models faster with purpose-built hardware. Which solution should the organization use?',
+    options: [
+      'GPUs',
+      'CPUs',
+      'CPUs',
+      'TPUs',
+    ],
+    correctAnswerIndex: 3,
+  ),
+// Question 277
+  Question(
+    id: 277,
+    topic: 'BigQuery',
+    question:
+        'An organization has collected petabytes of historical data. They need an advanced analysis solution that is fast, scalable, and fully managed. Which Google product or service should the organization use?',
+    options: [
+      'BigQuery',
+      'Cloud Storage',
+      'Firestore',
+      'Cloud SQL',
+    ],
+    correctAnswerIndex: 0,
+  ),
+// Question 278
+  Question(
+    id: 278,
+    topic: 'Data Backup and Recovery',
+    question:
+        'An organization is concerned about the risk of data loss that may occur due to hardware failures or cyber attacks. They want to restore their systems to a previous state if such an event occurs. What should the organization do?',
+    options: [
+      'Enable autoscaling.',
+      'Set service level objectives (SLOs).',
+      'Use Cloud Monitoring.',
+      'Back up data regularly.',
+    ],
+    correctAnswerIndex: 3,
+  ),
+// Question 279
+  Question(
+    id: 279,
+    topic: 'Microservices Architecture',
+    question:
+        'An organization wants to refactor their application by using a microservices architecture when migrating to the cloud. Which benefit would this action provide?',
+    options: [
+      'This migration pattern provides the fastest path to the cloud.',
+      'The refactored application is more efficient and scalable.',
+      'No code changes will be required.',
+      'The application will become PCI-DSS compliant by default.',
+    ],
+    correctAnswerIndex: 1,
+  ),
+// Question 280
+  Question(
+    id: 280,
+    topic: 'DDoS Protection with Cloud Armor',
+    question:
+        'An organization needs protection against distributed denial-of-service (DDoS) attacks. Which Google Cloud service should the organization use?',
+    options: [
+      'Security Command Center',
+      'Google Cloud Armor',
+      'Cloud Build',
+      'Cloud VPN',
+    ],
+    correctAnswerIndex: 1,
+  ),
+// Question 281
+  Question(
+    id: 281,
+    topic: 'Social Engineering Threats',
+    question:
+        'An organization is evaluating its defenses against cyber security threats and is concerned about the risks of social engineering by cyber criminals. How might these attacks happen?',
+    options: [
+      'Distributed denial-of-service attacks',
+      'SQL injection attacks',
+      'Phishing emails',
+      'Physical damage to hardware',
+    ],
+    correctAnswerIndex: 2,
+  ),
+// Question 282
+  Question(
+    id: 282,
+    topic: 'Hybrid Cloud',
+    question:
+        'An organization wants to adopt the advanced machine learning capabilities of the Google Cloud. However, regulations require data to be stored in an on-premises data center. Which approach should the organization use?',
+    options: [
+      'A multi-cloud approach',
+      'A private-cloud approach',
+      'A public-cloud approach',
+      'A hybrid-cloud approach',
+    ],
+    correctAnswerIndex: 3,
+  ),
+// Question 283
+  Question(
+    id: 283,
+    topic: 'Site Reliability Engineering (SRE)',
+    question:
+        'What is the Site Reliability Engineering (SRE) term for an organization\'s desired level of reliability and performance?',
+    options: [
+      'Scalable infrastructure',
+      'Service-level indicator',
+      'Service-level objective',
+      'Enhanced support',
+    ],
+    correctAnswerIndex: 2,
+  ),
+// Question 284
+  Question(
+    id: 284,
+    topic: 'Data Ownership',
+    question:
+        'When customer data is uploaded to Google Cloud, who owns the data?',
+    options: [
+      'A third party',
+      'The customer and Google share ownership',
+      'The customer',
+      'Google',
+    ],
+    correctAnswerIndex: 2,
+  ),
+// Question 285
+  Question(
+    id: 285,
+    topic: 'Cost Estimation',
+    question:
+        'An organization is planning to deploy a new workload to Google Cloud. They need an accurate estimate of the likely costs of running the workload. How should the organization create this estimate?',
+    options: [
+      'Use historic costs of an existing similar workload.',
+      'Deploy workload to test environment to observe costs.',
+      'Refer to pricing information and manually calculate an estimate.',
+      'Use the Google Cloud Pricing Calculator.',
+    ],
+    correctAnswerIndex: 3,
+  ),
+// Question 286
+  Question(
+    id: 286,
+    topic: 'Principle of Least Privilege',
+    question:
+        'An organization wants to ensure that they grant users only the permissions they require to perform their job responsibilities. Which security principle describes this approach?',
+    options: [
+      'Zero-trust',
+      'Cyber resilience',
+      'Security by default',
+      'Least privilege',
+    ],
+    correctAnswerIndex: 3,
   ),
 ];
