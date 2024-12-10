@@ -5,35 +5,47 @@ import '../models/question.dart';
 import '../models/quiz_result.dart';
 import '../data/questions.dart';
 import 'result_screen.dart';
+import 'dart:async';
 
 class QuizScreen extends StatefulWidget {
   final int? questionCount;
   final List<Question>? predefinedQuestions;
   final List<int>? selectedQuestionIds;
+  final bool isSampleExam; // Add this
 
-  QuizScreen({
+  const QuizScreen({
+    super.key, 
     this.questionCount,
     this.selectedQuestionIds,
+    this.isSampleExam = false, // Add this with default false
   }) : predefinedQuestions = null;
 
-  QuizScreen.withQuestions({required List<Question> questions})
+  const QuizScreen.withQuestions({super.key, required List<Question> questions})
       : predefinedQuestions = questions,
         questionCount = questions.length,
-        selectedQuestionIds = null;
-
+        selectedQuestionIds = null,
+        isSampleExam = false;
   @override
   _QuizScreenState createState() => _QuizScreenState();
 }
+
 
 class _QuizScreenState extends State<QuizScreen> {
   List<Question> questions = [];
   int currentQuestionIndex = 0;
   List<List<int>> selectedAnswers = [];
   List<int> temporaryAnswers = [];
+  Timer? _timer;
+  Duration _remainingTime = const Duration(hours: 1, minutes: 30);
+  
+  get options => null;
 
   @override
   void initState() {
     super.initState();
+    if (widget.isSampleExam) {
+      startTimer();
+    }
     if (widget.predefinedQuestions != null) {
       questions = widget.predefinedQuestions!;
     } else {
@@ -47,6 +59,33 @@ class _QuizScreenState extends State<QuizScreen> {
       questions.shuffle();
       questions = questions.take(widget.questionCount ?? questions.length).toList();
     }
+  }
+
+  void startTimer() {
+    _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
+      setState(() {
+        if (_remainingTime.inSeconds > 0) {
+          _remainingTime = _remainingTime - const Duration(seconds: 1);
+        } else {
+          _timer?.cancel();
+          _showResults();
+        }
+      });
+    });
+  }
+
+  @override
+  void dispose() {
+    _timer?.cancel();
+    super.dispose();
+  }
+
+  String _formatTime(Duration duration) {
+    String twoDigits(int n) => n.toString().padLeft(2, '0');
+    String hours = twoDigits(duration.inHours);
+    String minutes = twoDigits(duration.inMinutes.remainder(60));
+    String seconds = twoDigits(duration.inSeconds.remainder(60));
+    return "$hours:$minutes:$seconds";
   }
 
   void selectAnswer(int index) {
@@ -102,20 +141,35 @@ class _QuizScreenState extends State<QuizScreen> {
   @override
   Widget build(BuildContext context) {
     Question currentQuestion = questions[currentQuestionIndex];
-    List<String> options = List<String>.from(currentQuestion.options);
-
+    // Add null check and provide empty list as fallback
+    List<String> options = currentQuestion.options;
     return Scaffold(
       appBar: AppBar(
         title: Text('Question ${currentQuestionIndex + 1}/${questions.length}'),
+        actions: [
+          if (widget.isSampleExam)
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16.0),
+              child: Center(
+                child: Text(
+                  _formatTime(_remainingTime),
+                  style: const TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ),
+        ],
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(AppConstants.defaultPadding),
+          padding: const EdgeInsets.all(AppConstants.defaultPadding),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               Container(
-                padding: EdgeInsets.all(AppConstants.defaultPadding),
+                padding: const EdgeInsets.all(AppConstants.defaultPadding),
                 decoration: BoxDecoration(
                   color: Colors.blue.withOpacity(0.1),
                   borderRadius: BorderRadius.circular(AppConstants.defaultBorderRadius),
@@ -125,10 +179,10 @@ class _QuizScreenState extends State<QuizScreen> {
                   children: [
                     Text(
                       currentQuestion.question,
-                      style: TextStyle(fontSize: 18.0, height: 1.4),
+                      style: const TextStyle(fontSize: 18.0, height: 1.4),
                     ),
                     if (currentQuestion.secondCorrectAnswerIndex != null)
-                      Padding(
+                      const Padding(
                         padding: EdgeInsets.only(top: 8.0),
                         child: Text(
                           'Choose two correct answers',
@@ -141,22 +195,22 @@ class _QuizScreenState extends State<QuizScreen> {
                   ],
                 ),
               ),
-              SizedBox(height: AppConstants.defaultSpacing * 2),
+              const SizedBox(height: AppConstants.defaultSpacing * 2),
               ...options.asMap().entries.map((entry) {
                 int index = entry.key;
                 String text = entry.value;
                 bool isSelected = temporaryAnswers.contains(index);
 
                 return Padding(
-                  padding: EdgeInsets.only(bottom: AppConstants.defaultSpacing),
+                  padding: const EdgeInsets.only(bottom: AppConstants.defaultSpacing),
                   child: AppButton(
                     text: text,
                     isSelected: isSelected,
                     onPressed: () => selectAnswer(index),
                   ),
                 );
-              }).toList(),
-              SizedBox(height: AppConstants.defaultSpacing),
+              }),
+              const SizedBox(height: AppConstants.defaultSpacing),
               const SizedBox(height: AppConstants.defaultSpacing),
               AppTextButton(
                 text: 'Previous question',
@@ -170,7 +224,7 @@ class _QuizScreenState extends State<QuizScreen> {
                         }
                       });
                     }
-                  : () {}, // Provide empty function when disabled
+                  : () {},
               ),
             ],
           ),

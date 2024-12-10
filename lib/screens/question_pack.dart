@@ -72,14 +72,15 @@ class QuestionPackScreen extends StatelessWidget {
                   final random = Random();
                   final allQuestions = List.generate(286, (i) => i + 1);
                   allQuestions.shuffle(random);
-                  final selectedQuestions = allQuestions.take(60).toList();
+                  final selectedQuestions = allQuestions.take(50).toList();
                   
                   Navigator.push(
                     context,
                     MaterialPageRoute(
                       builder: (context) => QuizScreen(
-                        questionCount: 60,
+                        questionCount: 50,
                         selectedQuestionIds: selectedQuestions,
+                        isSampleExam: true,
                       ),
                     ),
                   );
@@ -91,7 +92,6 @@ class QuestionPackScreen extends StatelessWidget {
       ),
     );
   }
-
   void _navigateToCheckbox(BuildContext context, int start, int end) {
     Navigator.push(
       context,

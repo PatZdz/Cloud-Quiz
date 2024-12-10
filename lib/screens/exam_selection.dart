@@ -18,12 +18,12 @@ class ExamSelectionScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             AppButton(
-              text: 'CDL',
+              text: 'Cloud Digital Leader',
               onPressed: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => QuestionPackScreen()),
+                      builder: (context) => const QuestionPackScreen()),
                 );
               },
             ),

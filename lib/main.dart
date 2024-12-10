@@ -24,7 +24,7 @@ class QuizApp extends StatelessWidget {
     return MaterialApp(
       title: 'Cloud Exam Quiz',
       theme: AppTheme.lightTheme,
-      home: HomeScreen(),
+      home: const HomeScreen(),
     );
   }
 }
